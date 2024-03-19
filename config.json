@@ -1,0 +1,78 @@
+{
+    "titulo" : "Atividade 1",
+    "comando" : "python",
+    "msg_erro" : "Mensagem de erro padrão.",
+    "pontos" : 0,
+    "questoes" : [
+        {
+            "descricao" : "Questão 1",
+            "script" : "q1.py",
+            "pontos" : 10,
+            "correcoes" : [
+                {
+                    "entrada" : "Ana\n99999-9991\nBruna\n99999-9992\nClara\n99999-9993\nparar\nBruna",
+                    "func_expect" : "testar_regex",
+                    "msg_erro" : "Esperava \"99999-9992\"",
+                    "args_expect" : "99999-9992$"
+                },
+                {
+                    "entrada" : "Ana\n99999-9991\nBruna\n99999-9992\nClara\n99999-9993\nparar\nDaniel",
+                    "func_expect" : "testar_regex",
+                    "msg_erro" : "Esperava \"Não encontrado(a)\"",
+                    "args_expect" : "(?i:nã?o.*encontrad)"
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 2",
+            "script" : "q2.py",
+            "pontos" : 20,
+            "correcoes" : [
+                {
+                    "entrada" : "Ana\n99999-9991\nBruna\n99999-9992\nClara\n99999-9993\nparar\n99999-9992",
+                    "func_expect" : "testar_regex",
+                    "msg_erro" : "Esperava \"Bruna\"",
+                    "args_expect" : "Bruna$"
+                },
+                {
+                    "entrada" : "Ana\n99999-9991\nBruna\n99999-9992\nClara\n99999-9993\nparar\n99999-9994",
+                    "func_expect" : "testar_regex",
+                    "msg_erro" : "Esperava \"Não encontrado(a)\"",
+                    "args_expect" : "(?i:nã?o.*encontrad)"
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 3",
+            "script" : "q3.py",
+            "pontos" : 30,
+            "correcoes" : [
+                {
+                    "entrada" : "pedra\npadre",
+                    "func_expect" : "testar_regex",
+                    "msg_erro" : "Esperava \"Sim\"",
+                    "args_expect" : "(?i:sim)"
+                },
+                {
+                    "entrada" : "padre\npedro",
+                    "func_expect" : "testar_regex",
+                    "msg_erro" : "Esperava \"Não\"",
+                    "args_expect" : "(?i:nã?o)"
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 4",
+            "script" : "q4.py",
+            "pontos" : 40,
+            "correcoes" : [
+                {
+                    "entrada" : "123\nFeijão\n30\n456\nArroz\n25\nparar\n123\nFeijão\n15\n789\nTomate\n20\nparar",
+                    "func_expect" : "testar_regex",
+                    "msg_erro" : "Esperava \"{ 123 : { 'nome' : 'Feijão', 'qtd' : 45 }, 456: { 'nome' : 'Arroz', 'qtd' : 25 }, 789: { 'nome' : 'Tomate', 'qtd' : 20 } }\"",
+                    "args_expect" : "(?i:(123.*feijã?o.*45.*456.*arroz.*25.*789.*tomate.*20)|(123.*feijã?o.*45.*789.*tomate.*20.*456.*arroz.*25)|(456.*arroz.*25.*123.*feijã?o.*45.*789.*tomate.*20)|(456.*arroz.*25.*789.*tomate.*20.*123.*feijã?o.*45)|(789.*tomate.*20.*123.*feijã?o.*45.*456.*arroz.*25)|(789.*tomate.*456.*arroz.*25.*20.*123.*feijã?o.*45))"
+                }
+            ]
+        }
+   ]
+}
