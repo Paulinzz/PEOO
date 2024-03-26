@@ -27,3 +27,4 @@ cartas = [
 
 for carta in cartas:
     print(f'{carta["numero"]} de {carta["naipe"]}')
+    
