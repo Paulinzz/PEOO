@@ -1,0 +1,172 @@
+{
+    "titulo" : "Atividade 1",
+    "comando" : "python",
+    "msg_erro" : "Mensagem de erro padrão.",
+    "pontos" : 0,
+    "func_expect" : "testar_regex",
+    "questoes" : [
+        {
+            "descricao" : "Questão 1",
+            "script" : "q1.py",
+            "pontos" : 10,
+            "correcoes" : [
+                {
+                    "entrada" : "Ana\n99999-9991\nBruna\n99999-9992\nClara\n99999-9993\nparar\nBruna",
+                    "msg_erro" : "Esperava \"99999-9992\"",
+                    "verificacoes" : [ { "args_expect" : "99999-9992$" } ]
+                },
+                {
+                    "entrada" : "Ana\n99999-9991\nBruna\n99999-9992\nClara\n99999-9993\nparar\nDaniel",
+                    "msg_erro" : "Esperava \"Não encontrado(a)\"",
+                    "verificacoes" : [ { "args_expect" : "(?i:nã?o.*encontrad)" } ]
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 2",
+            "script" : "q2.py",
+            "pontos" : 20,
+            "correcoes" : [
+                {
+                    "entrada" : "Ana\n99999-9991\nBruna\n99999-9992\nClara\n99999-9993\nparar\n99999-9992",
+                    "msg_erro" : "Esperava \"Bruna\"",
+                    "verificacoes" : [ { "args_expect" : "Bruna$" } ]
+                },
+                {
+                    "entrada" : "Ana\n99999-9991\nBruna\n99999-9992\nClara\n99999-9993\nparar\n99999-9994",
+                    "msg_erro" : "Esperava \"Não encontrado(a)\"",
+                    "verificacoes" : [ { "args_expect" : "(?i:nã?o.*encontrad)" } ]
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 3",
+            "script" : "q3.py",
+            "pontos" : 30,
+            "correcoes" : [
+                {
+                    "entrada" : "pedra\npadre",
+                    "msg_erro" : "Esperava \"Sim\"",
+                    "verificacoes" : [ { "args_expect" : "(?i:sim)" } ]
+                },
+                {
+                    "entrada" : "padre\npedro",
+                    "verificacoes" : [ { "args_expect" : "(?i:nã?o)" } ],
+                    "msg_erro" : "Esperava \"Não\""
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 4",
+            "script" : "q4.py",
+            "pontos" : 40,
+            "correcoes" : [
+                {
+                    "entrada" : "123\nFeijão\n30\n456\nArroz\n25\nparar\n123\nFeijão\n15\n789\nTomate\n20\nparar",
+                    "msg_erro" : "Esperava \"{123: { 'nome': 'Feijão', 'qtd': 45 }, 456: {'nome': 'Arroz', 'qtd': 25}, 789: {'nome': 'Tomate', 'qtd': 20}}\"",
+                    "verificacoes" : [
+                        { "args_expect" : "(?i:123: {'nome': 'feij[aã]?o', 'qtd': 45)" },
+                        { "args_expect" : "(?i:456: {'nome': 'Arroz', 'qtd': 25)" },
+                        { "args_expect" :  "(?i:789: {'nome': 'Tomate', 'qtd': 20)" }
+                    ]
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 5",
+            "script" : "q5.py",
+            "pontos" : 1,
+            "correcoes" : [
+                {
+                    "msg_erro" : "Esperava \"{1: 'Um', 2: 'Dois', 3: 'Tr[eê]?s', 4: 'Quatro'}\"",
+                    "verificacoes" : [
+                        { "args_expect" : "(?i:1: 'Um')" },
+                        { "args_expect" : "(?i:2: 'Dois')" },
+                        { "args_expect" : "(?i:3: 'Tr[eê]?s')" },
+                        { "args_expect" : "(?i:4: 'Quatro')" }
+                    ]
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 6",
+            "script" : "q6.py",
+            "pontos" : 1,
+            "correcoes" : [
+                {
+                    "msg_erro" : "Esperava \"{1: 'Um', 2: 'Dois'}\"",
+                    "verificacoes" : [
+                        { "args_expect" : "(?i:1: 'Um')" },
+                        { "args_expect" : "(?i:2: 'Dois')" },
+                        { "func_expect" : "testar_nao_regex", "args_expect" : "(?i:3: 'Tr[eê]?s')" }
+                    ]
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 7",
+            "script" : "q7.py",
+            "pontos" : 3,
+            "correcoes" : [
+                {
+                    "msg_erro" : "Esperava \"{1: 'Um', 2: 'Dois'}\"",
+                    "verificacoes" : [
+                        { "args_expect" : "(?i:1: 'Um')" },
+                        { "args_expect" : "(?i:2: 'Dois')" },
+                        { "func_expect" : "testar_nao_regex", "args_expect" : "(?i:'Doiz')" }
+                    ]
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 8",
+            "script" : "q8.py",
+            "pontos" : 5,
+            "correcoes" : [
+                {
+                    "msg_erro" : "Esperava \n\"190 - Polícia Militar\n192 - SAMU\n193 - Bombeiros\n197 - Polícia Civil\"",
+                    "verificacoes" : [
+                        { "args_expect" : "(?i:190.*Pol[ií]?cia Militar)" },
+                        { "args_expect" : "(?i:192.*SAMU)" },
+                        { "args_expect" : "(?i:193.*Bombeiros)" },
+                        { "args_expect" : "(?i:197.*Pol[ií]?cia Civil)" }
+                    ]
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 9",
+            "script" : "q9.py",
+            "pontos" : 10,
+            "correcoes" : [
+                {
+                    "entrada" : "Alice\nBeatriz\nCarlos\nDaniela\nparar",
+                    "msg_erro" : "Esperava \"'{Alice': ['Beatriz', 'Carlos', 'Daniela']}\"",
+                    "verificacoes" : [
+                        { "args_expect" : "'Alice': \\['Beatriz', 'Carlos', 'Daniela'\\]" }
+                    ]
+                },
+                {
+                    "entrada" : "Alice\nparar",
+                    "msg_erro" : "Esperava \"{'Alice': []}\"",
+                    "verificacoes" : [
+                        { "args_expect" : "'Alice': \\[\\]" }
+                    ]
+                }
+            ]
+        },
+        {
+            "descricao" : "Questão 10",
+            "script" : "q10.py",
+            "pontos" : 100,
+            "correcoes" : [
+                {
+                    "msg_erro" : "Esperava \"4 de copas\n5 de copas\n8 de copas\n2 de espadas\n7 de espadas\n4 de ouro\n7 de ouro\n3 de paus\n7 de paus\n8 de paus\"",
+                    "verificacoes" : [
+                        { "args_expect" : "4 de copas\n5 de copas\n8 de copas\n2 de espadas\n7 de espadas\n4 de ouro\n7 de ouro\n3 de paus\n7 de paus\n8 de paus" }
+                    ]
+                }
+            ]
+        }
+   ]
+}
