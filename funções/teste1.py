@@ -10,4 +10,4 @@ def par_ou_impar(n):
 quantas = int(input("Deseja quantas vezes?"))
 
 for i in range(0, quantas):
-    print(eh_par(int(input("Digite o número para ver se é par: "))))
+    print(par_ou_impar(int(input("Digite o número para ver se é par: "))))
