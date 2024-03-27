@@ -1,4 +1,6 @@
 # Ordene as cartas por naipe e, dentro de cada naipe, por número
+import operator
+
 cartas = [
     { 'numero' : 4,
       'naipe' : 'copas' },
@@ -24,7 +26,12 @@ cartas = [
 
 # Implemente aqui sua ordenação
 
+cartas_ordenadas = sorted(cartas, key=operator.itemgetter('naipe', 'numero'))
 
-for carta in cartas:
+# Exibe as cartas ordenadas
+for carta in cartas_ordenadas:
     print(f'{carta["numero"]} de {carta["naipe"]}')
-    
+
+
+
+
