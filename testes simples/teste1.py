@@ -50,4 +50,4 @@ for i, v in enumerate(lista):
 
 print('-=' * 30)
 print('\033[1;32mPrograma finalizado com sucesso...')
-print('Volte sempre :D\033[m')
+print('Volte sempre :D\033[m')  
