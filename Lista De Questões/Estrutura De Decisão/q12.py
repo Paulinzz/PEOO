@@ -33,4 +33,5 @@ elif salario_bruto > 2500:
     salario_liquido = salario_bruto - imposto
     print(f"Com o valor por horas de: R${valor} e de horas no mês {quantidade_de_horas}")
     print(f"Seu salário Bruto é de: R${salario_bruto}\n Seu salário Líquido é de: R${salario_liquido} devido ao imposto de renda") 
-           
+
+# devo atualiza algumas coisas ainda
