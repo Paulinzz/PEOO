@@ -14,9 +14,18 @@ salario = float(input("Digite seu salário: "))
 
 if salario <= 280:
     aumento = salario * 0.2
+    salario_novo = salario + aumento
+    print(f"O seu salário antes do reajuste era de: R${salario}\nO seu percentual de aumento aplicado foi 20%\nO valor do aumento é de: R${aumento}\nO seu salario novo é de: R${salario_novo}")
 elif 280 < salario <= 700:
     aumento = salario * 0.15
+    salario_novo = salario + aumento
+    print(f"O seu salário antes do reajuste era de: R${salario}\nO seu percentual de aumento aplicado foi 15%\nO valor do aumento é de: R${aumento}\nO seu salario novo é de: R${salario_novo}")
 elif 700 < salario <= 1500:
     aumento = salario * 0.1
+    salario_novo = salario + aumento
+    print(f"O seu salário antes do reajuste era de: R${salario}\nO seu percentual de aumento aplicado foi 10%\nO valor do aumento é de: R${aumento}\nO seu salario novo é de: R${salario_novo}")
+elif salario > 1500:
+    aumento = salario * 0.05
+    salario_novo = salario + aumento
+    print(f"O seu salário antes do reajuste era de: R${salario}\nO seu percentual de aumento aplicado foi 5%\nO valor do aumento é de: R${aumento}\nO seu salario novo é de: R${salario_novo}")
 
-    # nao ternimada s2    
