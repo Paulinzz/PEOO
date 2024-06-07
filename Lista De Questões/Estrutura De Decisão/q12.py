@@ -15,23 +15,48 @@ quantidade_de_horas = int(input("Digite a quantidade horas trabalhadas no mês: 
 salario_bruto = valor * quantidade_de_horas
 
 if salario_bruto <= 900:
-    salario_liquido = salario_bruto
+    sindicato = salario_bruto * 0.03
+    fgts = salario_bruto * 0.11
+    inss = salario_bruto * 0.1
+    salario_liquido = salario_bruto - (fgts + sindicato + inss)
     print(f"Com o valor por horas de: R${valor} e de horas no mês {quantidade_de_horas}")    
+    print(f"INSS R${inss}")
+    print(f"FGTS R${fgts}")
+    print(f"total de desconto: {fgts + inss + sindicato}")
     print(f"Seu salário Bruto é de: R${salario_bruto}\n Seu salário Líquido é de: R${salario_liquido}")
 elif 900 < salario_bruto <= 1500:
     imposto = salario_bruto * 0.05
-    salario_liquido = salario_bruto - imposto
+    sindicato = salario_bruto * 0.03
+    fgts = salario_bruto * 0.11
+    inss = salario_bruto * 0.1    
+    salario_liquido = salario_bruto - (imposto + fgts + sindicato + inss)
     print(f"Com o valor por horas de: R${valor} e de horas no mês {quantidade_de_horas}")
+    print(f"Imposto de Renda R${imposto}")
+    print(f"INSS R${inss}")
+    print(f"FGTS R${fgts}")
+    print(f"total de desconto: {fgts + inss + imposto + sindicato}")
     print(f"Seu salário Bruto é de: R${salario_bruto}\n Seu salário Líquido é de: R${salario_liquido} devido ao imposto de renda")
 elif 1500 < salario_bruto <= 2500:
     imposto = salario_bruto * 0.1
-    salario_liquido = salario_bruto - imposto
+    sindicato = salario_bruto * 0.03
+    fgts = salario_bruto * 0.11
+    inss = salario_bruto * 0.1
+    salario_liquido = salario_bruto - (imposto + fgts + sindicato + inss)
     print(f"Com o valor por horas de: R${valor} e de horas no mês {quantidade_de_horas}")
+    print(f"Imposto de Renda R${imposto}")
+    print(f"INSS R${inss}")
+    print(f"FGTS R${fgts}")
+    print(f"total de desconto: {fgts + inss + imposto + sindicato}")
     print(f"Seu salário Bruto é de: R${salario_bruto}\n Seu salário Líquido é de: R${salario_liquido} devido ao imposto de renda")
 elif salario_bruto > 2500:
     imposto = salario_bruto * 0.2
-    salario_liquido = salario_bruto - imposto
+    sindicato = salario_bruto * 0.03
+    fgts = salario_bruto * 0.11
+    inss = salario_bruto * 0.1
+    salario_liquido = salario_bruto - (imposto + fgts + sindicato + inss)
     print(f"Com o valor por horas de: R${valor} e de horas no mês {quantidade_de_horas}")
+    print(f"Imposto de Renda R${imposto}")
+    print(f"INSS R${inss}")
+    print(f"FGTS R${fgts}")
+    print(f"total de desconto: {fgts + inss + imposto + sindicato}")
     print(f"Seu salário Bruto é de: R${salario_bruto}\n Seu salário Líquido é de: R${salario_liquido} devido ao imposto de renda") 
-
-# devo atualiza algumas coisas ainda
