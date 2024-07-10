@@ -11,5 +11,12 @@ produtos = [
 'Feijão'
 
 def produto_mais_caro(produtos):
-    mais_caro = 0
-    
+    mais_caro = produtos[0]  # Inicializo com o primeiro produto
+    for produto in produtos:
+        if produto['preco'] > mais_caro['preco']:
+            mais_caro = produto
+    return mais_caro['nome']
+
+
+print(produto_mais_caro(produtos)) 
+

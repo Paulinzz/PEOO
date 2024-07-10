@@ -10,8 +10,7 @@ numero = 5
 import math 
 def fatorial(n):
     resultado = math.factorial(n)
-    print(resultado)
-    return
+    return resultado
 
-fatorial(numero)
+print(fatorial(numero))
 
