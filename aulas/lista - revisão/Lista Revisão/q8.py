@@ -9,8 +9,11 @@ numero = 5
 
 import math 
 def fatorial(n):
-    resultado = math.factorial(n)
-    return resultado
+    fat = 1
+    for i in range(2, n+1):
+         fat *= i
+    return fat
+
 
 print(fatorial(numero))
 
