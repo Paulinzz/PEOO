@@ -18,5 +18,5 @@ def media_notas(alunos):
     for i in alunos.values():
         soma += i
     print (soma / qnt_alunos)
-    return
+    
 media_notas(notas_alunos)
