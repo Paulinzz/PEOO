@@ -1,0 +1,7 @@
+def somar(a, b):
+   print(a + b)
+lista_ab = [2, 3]
+dicio_ab = {'a': 2, 'b': 3}
+somar(2, 3)
+somar(*lista_ab)
+somar(**dicio_ab)
