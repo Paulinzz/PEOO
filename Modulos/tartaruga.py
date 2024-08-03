@@ -16,7 +16,7 @@ forward(100)  # Anda pra frente
 for i in range(3): 
    right(90)  # Gira a tartaruga para a direita
    forward(50)
-up()  # Levanta a caneta
+up()  # Levanta a caneat
 
 
 # Desenha a letra E
