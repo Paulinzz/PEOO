@@ -51,7 +51,7 @@ right(180)
 forward(100)
     # "til" "~"
 up()
-setx(-300)  # Mesma distância da letra
+setx(-280)  # Mesma distância da letra
 sety(150)  # Altura ajustada para cima
 down()
 left(45)
@@ -61,10 +61,10 @@ circle(20, 90)
 up()
 
 # letra O
-setx(-250)  # Mesma distância da letra
-sety(80)  # Altura ajustada para cima
+setx(-250)  
+sety(80)  
 down()
-circle(50)  # Desenha um círculo com raio 50
+circle(50)  
 up()
 forward(20)
 
@@ -76,12 +76,12 @@ sety(000)  # Altura ajustada para cima
 down()
 
 # Desenha a letra P
-left(90)  # Gira a tartaruga para a esquerda
-forward(100)  # Anda pra frente
+left(90)  
+forward(100)  
 for i in range(3): 
-   right(90)  # Gira a tartaruga para a direita
+   right(90)  
    forward(50)
-up()  # Levanta a caneat
+up()  
 
 # letra A
 home()
@@ -100,35 +100,39 @@ forward(40)
 right(180)
 forward(100)
 up()
+
 # letra U
 up()
 home()
-setx(150)  # Define a posição x inicial
-sety(-20)   # Define a posição y inicial
+setx(170)  # Define a posição x inicial
+sety(0)   # Define a posição y inicial
 # Desenhar a letra "U"
 left(90)  # Vira para cima (posição inicial)
 forward(100)  # Desenha o primeiro lado vertical
 down()
-right(180)  # Vira para desenhar a parte inferior curva
-circle(70, 180)  # Desenha uma meia-circunferência
+right(220)  # Vira para desenhar a parte inferior curva
+circle(60, 240)  # Desenha uma meia-circunferência
 up()
 right(180)  # Vira para desenhar o segundo lado vertical
 up()
+
 # letra L
 home()
-setx(200)
+setx(320)
 sety(100)
 down()
 right(90)
 forward(100)
 left(90)
-forward(100)
+forward(50)
+
 # letra O
 up()
-setx(250)  # Define a posição x inicial
-sety(70)  # Define a posição y inicial
+setx(400)  # Define a posição x inicial
+sety(0)  # Define a posição y inicial
 down()
-circle(50)  # Desenha um círculo com raio 50
+circle(50) 
 
-
-time.sleep(3)
+up()
+hideturtle()
+time.sleep(10)
