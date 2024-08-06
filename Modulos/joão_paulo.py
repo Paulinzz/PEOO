@@ -32,6 +32,7 @@ setx(-400)
 sety(00)  
 down()
 circle(50)  # Desenha um círculo com raio 50
+up()
 forward(20)
 up()
 # letra Ã
