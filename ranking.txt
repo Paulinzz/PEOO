@@ -1,0 +1,6 @@
+1
+100
+1
+100
+& "C:/Program Files/Python312/python.exe" c:/Users/20231101110019/Documents/GitHub/POO/arquivo/ranking.py
+& "C:/Program Files/Python312/python.exe" c:/Users/20231101110019/Documents/GitHub/POO/arquivo/ranking.py

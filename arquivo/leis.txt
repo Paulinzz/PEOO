@@ -1,0 +1,3 @@
+1. Um robô não pode ferir um humano ou permitir que um humano sofra algum mal;
+2. Os robôs devem obedecer às ordens dos humanos, exceto nos casos em que essas ordens entrem em conflito com a primeira lei;
+3. um robô deve proteger sua própria existência, desde que não entre em conflito com as leis anteriores.
