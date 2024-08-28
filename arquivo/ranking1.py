@@ -1,7 +1,7 @@
-# Garante que o arquivo existe
+# abre um novo arquivo e fecha para não ocupa na memória.
 open('ranking.txt', 'a').close()
 
-def eh_numero_inteiro(s):
+def e_numero_inteiro(s):
     """Verifica se a string s pode ser convertida para um número inteiro."""
     return s.isdigit() or (s[1:].isdigit() if s[0] == '-' else False)
 
@@ -24,7 +24,7 @@ while True:
     nome = input('Jogador: ').strip()
     pontuacao = input('Pontuação: ').strip()
 
-    if eh_numero_inteiro(pontuacao):
+    if e_numero_inteiro(pontuacao):
         pontuacao = int(pontuacao)
         with open('ranking.txt', 'a') as arq:
             arq.write(nome + '\n')
