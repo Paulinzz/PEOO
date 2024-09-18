@@ -125,4 +125,3 @@ def rodar_jogo():
         relogio.tick(velocidade_jogo)
 
 rodar_jogo()
-
