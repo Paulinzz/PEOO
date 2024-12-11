@@ -28,10 +28,12 @@ class Retangulo(Forma):
         self.altura = altura
 
     def desenhar_forma(self, t: turtle.Turtle):
+        t.begin_fill()
         for _ in range(2):
             for tam in [self.largura, self.altura]:
                 t.forward(tam)
                 t.right(90)
+        t.end_fill()
 
 class Triangulo(Forma):
     def __init__(self, lado, cor, x, y):
@@ -39,9 +41,11 @@ class Triangulo(Forma):
         self.lado = lado
 
     def desenhar_forma(self, t: turtle.Turtle):
+        t.begin_fill()
         for _ in range(3):
             t.forward(self.lado)
             t.right(120)
+        t.end_fill()
 
 class Circulo(Forma):
     def __init__(self, raio, cor, x, y):
@@ -49,7 +53,9 @@ class Circulo(Forma):
         self.raio = raio
 
     def desenhar_forma(self, t: turtle.Turtle):
+        t.begin_fill()
         t.circle(self.raio)
+        t.end_fill()
 
 class Estrela(Forma):
     def __init__(self, tamanho, cor, x, y):
@@ -67,19 +73,19 @@ t = turtle.Turtle()
 turtle.bgcolor("darkblue")
 
 # Criando as formas
+grama = Retangulo(800, 400, 'green', -400, -300)  # Tronco da árvore
 tronco = Retangulo(50, 150, 'brown', -25, -150)  # Tronco da árvore
-folha1 = Circulo(50, 'green', 0, 0)  # Folha da árvore
-sol = Circulo(50, 'yellow', 200, 100)  # Sol
+folhas = Circulo(50, 'green', 0, -160)  # Folha da árvore
+lua = Circulo(50, 'lightyellow', 200, 100)  # Sol
 estrela1 = Estrela(30, 'black', -150, 150)  # Estrela
 estrela2 = Estrela(20, 'black', 100, 200)  # Outra estrela
 
 # Lista de formas para desenhar
-formas = [tronco, folha1, sol, estrela1, estrela2]
+formas = [grama, tronco, folhas, lua, estrela1, estrela2]
 
 # Desenhando as formas
 for f in formas:
     f.desenhar()
-
-# Mantém a janela aberta por 3 segundos antes de fechar
+    time.sleep(1)
 time.sleep(3)
 turtle.done()
