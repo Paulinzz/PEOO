@@ -65,25 +65,21 @@ class Estrela(Forma):
     def desenhar_forma(self, t: turtle.Turtle):
         for _ in range(5):
             t.forward(self.tamanho)
-            t.right(144)  # Ângulo para desenhar uma estrela de 5 pontas
+            t.right(144)  
 
 
-#fundo 
 t = turtle.Turtle()
 turtle.bgcolor("darkblue")
 
-# Criando as formas
-grama = Retangulo(800, 400, 'green', -400, -300)  # Tronco da árvore
-tronco = Retangulo(50, 150, 'brown', -25, -150)  # Tronco da árvore
-folhas = Circulo(50, 'green', 0, -160)  # Folha da árvore
-lua = Circulo(50, 'lightyellow', 200, 100)  # Sol
-estrela1 = Estrela(30, 'black', -150, 150)  # Estrela
-estrela2 = Estrela(20, 'black', 100, 200)  # Outra estrela
+grama = Retangulo(800, 400, 'green', -400, -300)  
+tronco = Retangulo(50, 150, 'brown', -25, -150) 
+folhas = Circulo(50, 'green', 0, -160)  
+lua = Circulo(50, 'lightyellow', 200, 100) 
+estrela1 = Estrela(30, 'black', -150, 150)  
+estrela2 = Estrela(20, 'black', 100, 200)  
 
-# Lista de formas para desenhar
 formas = [grama, tronco, folhas, lua, estrela1, estrela2]
 
-# Desenhando as formas
 for f in formas:
     f.desenhar()
     time.sleep(1)
