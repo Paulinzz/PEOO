@@ -77,8 +77,9 @@ folhas = Circulo(50, 'green', 0, -160)
 lua = Circulo(50, 'lightyellow', 200, 100) 
 estrela1 = Estrela(30, 'black', -150, 150)  
 estrela2 = Estrela(20, 'black', 100, 200)  
+estrela3 = Estrela(10, "black", 150, 100)
 
-formas = [grama, tronco, folhas, lua, estrela1, estrela2]
+formas = [grama, tronco, folhas, lua, estrela1, estrela2, estrela3]
 
 for f in formas:
     f.desenhar()
