@@ -1,6 +1,5 @@
 import turtle
 import time
-import math
 
 class Forma():
     def __init__(self, nome, cor, x, y):
@@ -19,7 +18,7 @@ class Forma():
         t.end_fill()
 
     def desenhar_forma(self, t: turtle.Turtle):
-        raise Exception("Metodo Alternativo")
+        raise Exception('Metodo Alternativo')
 
 class Retangulo(Forma):
     def __init__(self, largura, altura, cor, x, y):
@@ -69,7 +68,7 @@ class Estrela(Forma):
 
 
 t = turtle.Turtle()
-turtle.bgcolor("darkblue")
+turtle.bgcolor('darkblue')
 
 grama = Retangulo(800, 400, 'green', -400, -300)  
 tronco = Retangulo(50, 150, 'brown', -25, -150) 
@@ -77,7 +76,7 @@ folhas = Circulo(50, 'green', 0, -160)
 lua = Circulo(50, 'lightyellow', 200, 100) 
 estrela1 = Estrela(30, 'black', -150, 150)  
 estrela2 = Estrela(20, 'black', 100, 200)  
-estrela3 = Estrela(10, "black", 150, 100)
+estrela3 = Estrela(10, 'black', 150, 100)
 
 formas = [grama, tronco, folhas, lua, estrela1, estrela2, estrela3]
 
