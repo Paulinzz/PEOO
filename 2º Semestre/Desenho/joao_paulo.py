@@ -6,7 +6,7 @@ import random
 # configuração da janela
 class Forma():
     # criando o construdor
-    def __init__(self, nome, cor, x, y):
+    def __init__(self, nome: str, cor: str, x: int, y: int):
         self.nome = nome
         self.cor = cor
         self.x = x
@@ -27,7 +27,7 @@ class Forma():
 
 # criando a classe retangulo como figura geometrica
 class Retangulo(Forma):
-    def __init__(self, largura, altura, cor, x, y): # criando construdor
+    def __init__(self, largura:int, altura: int, cor: str, x: int, y: int): # criando construdor
         super().__init__('Retangulo', cor, x, y) # 
         self.largura = largura
         self.altura = altura
@@ -41,7 +41,7 @@ class Retangulo(Forma):
         t.end_fill()
 
 class Triangulo(Forma):
-    def __init__(self, lado, cor, x, y):
+    def __init__(self, lado: int, cor: str, x: int, y: int):
         super().__init__('Triangulo', cor, x, y)
         self.lado = lado
 
@@ -53,7 +53,7 @@ class Triangulo(Forma):
         t.end_fill()
 
 class Circulo(Forma):
-    def __init__(self, raio, cor, x, y):
+    def __init__(self, raio: int, cor: str, x: int, y: int):
         super().__init__('Circulo', cor, x, y)
         self.raio = raio
 
@@ -63,7 +63,7 @@ class Circulo(Forma):
         t.end_fill()
 
 class Estrela(Forma):
-    def __init__(self, tamanho, cor, x, y):
+    def __init__(self, tamanho: int, cor:str, x:int, y:int):
         super().__init__('Estrela', cor, x, y)
         self.tamanho = tamanho
 
@@ -82,10 +82,10 @@ folhas = Circulo(50, 'green', 0, -160)
 lua = Circulo(50, 'lightyellow', 200, 100) 
 formas = [grama, tronco, folhas, lua]
 for _ in range(16): 
-    x = random.randint( 100, 400)  
+    x = random.randint( -300, 300)  
     y = random.randint( 100, 300)  
     tamanho = random.randint(5, 15)  
-    estrela = Estrela(tamanho, 'white', x, y)
+    estrela = Estrela(tamanho, 'black', x, y)
     formas.append(estrela)
 
 
