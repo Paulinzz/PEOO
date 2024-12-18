@@ -113,18 +113,27 @@ class PedidoLocal(Pedido):
 class PedidoEntrega(Pedido):
     def __init__(self, endereco: str):
         super().__init__(None, endereco)
-
+        
+açaí = Acai("Açaí Puro", "M")
+açaí.adicionar_ingrediente(Ingrediente("Granola", 2.0))
+açaí.adicionar_ingrediente(Ingrediente("Morango", 3.0))
+açaí.adicionar_ingrediente(Ingrediente("Calda de Chocolate", 1.5))
+print("-"*50)
+açaí.exibir_detalhes()
 pedido_local = PedidoLocal(1)
 pedido_local.exibir_detalhes()
 
 print("-"*50)
 
 pedido_entrega = PedidoEntrega("Rua dos Bobos, 0")
+
+açaí2 = Acai("Açaí com Guaraná", "G")
+açaí2.adicionar_ingrediente(Ingrediente("Granola", 2.0))
+açaí2.adicionar_ingrediente(Ingrediente("Morango", 3.0))
+açaí2.adicionar_ingrediente(Ingrediente("Calda de Chocolate", 1.5))
+print("-"*50)
+açaí2.exibir_detalhes()
 pedido_entrega.exibir_detalhes()
 
 print("-"*50)
 
-pedido_local = PedidoLocal(2)
-pedido_local.exibir_detalhes()
-
-print("-"*50)
