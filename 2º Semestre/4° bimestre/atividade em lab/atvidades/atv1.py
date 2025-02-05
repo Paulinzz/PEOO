@@ -36,14 +36,14 @@ class Atbash(Criptografia):
         self.alfabeto_invertido = self.alfabeto[::-1]
     
     def cifrar(self, texto: str):
-        texto_cifrado = []
+        texto_cifrado = ""
         for caract in texto.upper():
             if caract in self.alfabeto:
                 index = self.alfabeto.index(caract)
-                texto_cifrado.append(self.alfabeto_invertido[index])
+                texto_cifrado += self.alfabeto_invertido[index]
             else:
-                texto_cifrado.append(caract)  
-        return ''.join(texto_cifrado)
+                texto_cifrado += caract  
+        return texto_cifrado
     
     def decifrar(self, texto: str):
         return self.cifrar(texto)
