@@ -107,13 +107,9 @@ class Filhos:
         return f"Filhos: {self.quantidade}" if self.tem_filhos else "Sem filhos"
 
 
-# ------------------------ #
-# **Simulação no Terminal** #
-# ------------------------ #
 
 print("\n=== Simulação de Viagem no Tempo ===\n")
 
-# Criando Pessoa
 nome = input("Digite seu nome: ")
 sexo = input("Digite seu sexo: ")
 nacionalidade = input("Digite sua nacionalidade: ")
@@ -122,7 +118,6 @@ cor_pele = input("Digite sua cor de pele: ")
 
 pessoa = Pessoa(nome, sexo, nacionalidade, idade, cor_pele)
 
-# Escolhendo Profissão
 print("\nEscolha sua profissão:")
 opcoes_profissao = ["Médico", "Engenheiro", "Professor", "Atendente"]
 for i, nome_profissao in enumerate(opcoes_profissao):
@@ -131,7 +126,6 @@ for i, nome_profissao in enumerate(opcoes_profissao):
 escolha = int(input("Digite o número da sua profissão: ")) - 1
 pessoa.definir_profissao(Profissao.criar_profissao(opcoes_profissao[escolha]))
 
-# Escolhendo Relacionamento
 relacionamento_status = input("\nVocê deseja estar em um relacionamento? (s/n): ").lower() == 's'
 if relacionamento_status:
     tipo_relacionamento = input("Digite o tipo de relacionamento (Casado/Namorando): ")
@@ -142,7 +136,6 @@ else:
 
 pessoa.relacionamento = relacionamento
 
-# Escolhendo Filhos
 filhos_status = input("\nVocê deseja ter filhos? (s/n): ").lower() == 's'
 if filhos_status:
     quantidade = int(input("Quantos filhos deseja ter? "))
@@ -152,5 +145,4 @@ else:
 
 pessoa.filhos = filhos
 
-# Exibindo Resultado
 pessoa.exibir_futuro()
